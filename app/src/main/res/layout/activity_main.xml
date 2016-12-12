@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,28 +9,59 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText,ContentDescription">
 
-    <io.micro.roundedview.RoundedTextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <io.micro.roundedview.RoundedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="Hello World"
+            android:textColor="@color/color_text"
+            app:backgroundColor="@color/color_button"
+            app:radius="40dp" />
+
+        <io.micro.roundedview.RoundedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="Hello World"
+            android:textColor="@color/color_text"
+            app:backgroundColor="@color/color_button"
+            app:backgroundNormalColor="@color/colorAccent"
+            app:backgroundPressedColor="@color/colorPrimaryDark"
+            app:radius="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:clickable="true"
-        android:padding="10dp"
-        android:text="Hello World"
-        android:textColor="@color/color_text"
-        app:backgroundColor="@color/color_button"
-        app:radius="40dp" />
+        android:layout_marginTop="10dp">
 
-    <io.micro.roundedview.RoundedTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:clickable="true"
-        android:padding="10dp"
-        android:text="Hello World"
-        android:textColor="@color/color_text"
-        app:backgroundNormalColor="@color/colorAccent"
-        app:backgroundPressedColor="@color/colorPrimaryDark"
-        app:radius="40dp" />
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_github" />
+
+        <io.micro.roundedview.CircleImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@mipmap/ic_github" />
+
+        <io.micro.roundedview.CircleImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_github" />
+
+        <io.micro.roundedview.CircleImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="#ff0" />
+    </LinearLayout>
 </LinearLayout>
